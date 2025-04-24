@@ -35,6 +35,7 @@ function Mainpage() {
     })
   }
 
+
   const frontimageref = useRef(null);
   const backimageref = useRef(null);
   const topimageref = useRef(null);
@@ -132,91 +133,34 @@ function Mainpage() {
 
     setshowPopup(true);
 
-    let frontURL = '';
-    let backURL = '';
-    let topURL = '';
-    let bottomURL = '';
 
-
-
-    if (frontimage) {
-      const front_image = new FormData();
-      front_image.append('file', frontimage);
-      front_image.append("upload_preset", "flex3d")
-      front_image.append("cloud_name", "doofeeyue")
-
-      const res1 = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
+    const uploadImage = async (imageFile) => {
+      const formData = new FormData();
+      formData.append('file', imageFile);
+      formData.append("upload_preset", "flex3d");
+      formData.append("cloud_name", "doofeeyue");
+    
+      const response = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
         method: 'POST',
-        body: front_image
-      })
-
-      if (res1.ok) {
-        const data = await res1.json();
-        frontURL = data.secure_url;
-        console.log("front image uploaded successfuly");
-        console.log(data);
+        body: formData
+      });
+    
+      if (response.ok) {
+        const data = await response.json();
+        return data.secure_url;
       }
-    }
+      return null;
+    };
+    
+    const [frontURL, backURL, topURL, bottomURL] = await Promise.all([
+      frontimage ? uploadImage(frontimage) : null,
+      backimage ? uploadImage(backimage) : null,
+      topimage ? uploadImage(topimage) : null,
+      bottomimage ? uploadImage(bottomimage) : null
+    ]);
+    
 
-    if (backimage) {
-
-      const back_image = new FormData();
-      back_image.append('file', backimage);
-      back_image.append("upload_preset", "flex3d")
-      back_image.append("cloud_name", "doofeeyue")
-
-      const res2 = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
-        method: 'POST',
-        body: back_image
-      })
-      if (res2.ok) {
-        const data = await res2.json();
-        backURL = data.secure_url;
-        console.log("back image uploaded successfuly");
-        console.log(data);
-      }
-    }
-
-    if (topimage) {
-      const top_image = new FormData();
-      top_image.append('file', topimage);
-      top_image.append("upload_preset", "flex3d")
-      top_image.append("cloud_name", "doofeeyue")
-
-      const res3 = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
-        method: 'POST',
-        body: top_image
-      })
-
-      if (res3.ok) {
-        const data = await res3.json();
-        topURL = data.secure_url;
-        console.log("top image uploaded successfuly");
-        console.log(data);
-      }
-    }
-
-
-
-    if (bottomimage) {
-      const bottom_image = new FormData();
-      bottom_image.append('file', bottomimage);
-      bottom_image.append("upload_preset", "flex3d")
-      bottom_image.append("cloud_name", "doofeeyue")
-
-      const res4 = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
-        method: 'POST',
-        body: bottom_image
-      })
-
-      if (res4.ok) {
-        const data = await res4.json();
-        bottomURL = data.secure_url;
-        console.log("bottom image uploaded successfuly");
-        console.log(data);
-      }
-
-    }
+   
 
 
     const resp = await fetch(`${Host_url}/client/ordersubmit`, {
@@ -303,7 +247,7 @@ function Mainpage() {
 
           <p id={Mainpagecss.gt}>Free Trial 1 Month</p>
 
-          <video src="/flex3dvid.mp4" id={Mainpagecss.vid} loop autoPlay muted preload='auto' playsInline></video>
+          <video src="/flex3d_vid_optimized.mp4" id={Mainpagecss.vid} loop autoPlay muted preload='auto' playsInline></video>
         </div>
 
 
