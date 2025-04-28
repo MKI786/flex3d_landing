@@ -159,10 +159,7 @@ function Mainpage() {
       bottomimage ? uploadImage(bottomimage) : null
     ]);
     
-
-   
-
-
+  
     const resp = await fetch(`${Host_url}/client/ordersubmit`, {
       method: 'POST',
       body: JSON.stringify(form),
