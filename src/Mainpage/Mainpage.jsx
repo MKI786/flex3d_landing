@@ -243,6 +243,7 @@ function Mainpage() {
         </div>
 
         <div className={Mainpagecss.r1c2}>
+          <div className={Mainpagecss.rot}></div>
           <img id={Mainpagecss.i1} src="p1.png" alt="" />
         </div>
 

@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: rgb(241, 241, 241);
+   
     user-select: none;
 }
 
@@ -16,6 +16,9 @@
     justify-content: space-between;
     padding: 1rem;
     position: relative;
+    background: linear-gradient(to bottom, rgba(24, 110, 121, 0.274), white);
+
+
 }
 
 .r1 .r1c1 {
@@ -29,6 +32,7 @@
     justify-content: space-between;
     overflow: hidden;
     gap: 4rem;
+    background-color: transparent;
 }
 
 .r1 .r1c1 .heading1 {
@@ -37,6 +41,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(31, 31, 31);
     user-select: none;
+    background-color:transparent;
 }
 
 .r1 .r1c1 .heading2 {
@@ -44,6 +49,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(59, 59, 59);
     user-select: none;
+    background-color: transparent;
 
 }
 
@@ -59,6 +65,7 @@
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     border: none;
+    
 }
 
 .ctabutton button:hover {
@@ -99,9 +106,34 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: rgb(241, 241, 241);
     border-radius: 10px 10px;
     overflow: hidden;
+    background-color: white;
+    z-index: 1;
+
+}
+
+.rot{
+    position: absolute;
+    width: 200%;
+    height:200%;
+    background: linear-gradient(to bottom, rgb(18, 82, 90), white,white);
+    z-index: 2;
+    animation-name: rotate;
+    animation-timing-function:ease-in-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;    
+}
+
+@keyframes rotate {
+
+from{
+    transform: rotateZ(0deg);
+}
+to{
+    transform: rotateZ(360deg);
+}
 }
 
 #i1 {
@@ -109,6 +141,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: none;
+    z-index: 3;
 
 }
 
@@ -383,6 +416,7 @@
     background-color: transparent;
     border-radius: 10px 10px;
     overflow: hidden;
+    background-color: white;
 }
 
 
@@ -495,6 +529,7 @@
     color: green;
     font-size: 50px;
     cursor: pointer;
+    background-color: white;
 }
 
 #wait {
@@ -797,7 +832,7 @@
         color: green;
         font-size: 44px;
         cursor: pointer;
-        background-color: transparent;
+            background-color: white;
     }
 
 }
