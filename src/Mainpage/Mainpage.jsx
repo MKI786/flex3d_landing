@@ -423,7 +423,7 @@ function Mainpage() {
 
 
 
-      {showPopup && (
+      { showPopup && (
         <div className={Mainpagecss.overlay}>
           {uploadsCompleted ? (
             <div className={Mainpagecss.popup}>
@@ -442,7 +442,7 @@ function Mainpage() {
               </button>
             </div>
           ) : (
-            <div className={Mainpagecss.popup}>
+            <div className={Mainpagecss.popup} id={Mainpagecss.wait}>
               🕐 Order is completing...<br />
               Please wait...
             </div>
