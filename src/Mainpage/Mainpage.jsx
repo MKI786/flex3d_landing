@@ -10,7 +10,7 @@ import { TbHexagonNumber4Filled } from "react-icons/tb";
 import { TbHexagonNumber5Filled } from "react-icons/tb";
 import { IoMdCloseCircle } from "react-icons/io";
 import { FaSquareWhatsapp } from "react-icons/fa6";
-
+import imageCompression from 'browser-image-compression';
 
 
 import Mainpagecss from '../Mainpage/Mainpagecss.module.css'
@@ -134,9 +134,21 @@ function Mainpage() {
     setshowPopup(true);
 
 
+    const compressImage = async (imageFile) => {
+      const options = {
+        maxSizeMB: 0.5,
+        maxWidthOrHeight: 1024,
+        useWebWorker: true
+      };
+      return await imageCompression(imageFile, options);
+    };
+
+
     const uploadImage = async (imageFile) => {
+
+      const compressedFile = await compressImage(imageFile);
       const formData = new FormData();
-      formData.append('file', imageFile);
+      formData.append('file', compressedFile);
       formData.append("upload_preset", "flex3d");
       formData.append("cloud_name", "doofeeyue");
     
