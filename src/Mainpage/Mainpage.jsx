@@ -130,47 +130,48 @@ function Mainpage() {
 
   const handlesubmit = async (e) => {
     e.preventDefault();
-
     setshowPopup(true);
 
 
-    const compressImage = async (imageFile) => {
-      const options = {
-        maxSizeMB: 0.5,
-        maxWidthOrHeight: 1024,
-        useWebWorker: true
-      };
-      return await imageCompression(imageFile, options);
-    };
+    // const compressImage = async (imageFile) => {
+    //   const options = {
+    //     maxSizeMB: 0.5,
+    //     maxWidthOrHeight: 1024,
+    //     useWebWorker: true
+    //   };
+    //   return await imageCompression(imageFile, options);
+    // };
 
 
-    const uploadImage = async (imageFile) => {
+    // const uploadImage = async (imageFile) => {
 
-      const compressedFile = await compressImage(imageFile);
-      const formData = new FormData();
-      formData.append('file', compressedFile);
-      formData.append("upload_preset", "flex3d");
-      formData.append("cloud_name", "doofeeyue");
+    //   const compressedFile = await compressImage(imageFile);
+    //   const formData = new FormData();
+    //   formData.append('file', compressedFile);
+    //   formData.append("upload_preset", "flex3d");
+    //   formData.append("cloud_name", "doofeeyue");
     
-      const response = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
-        method: 'POST',
-        body: formData
-      });
+    //   const response = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
+    //     method: 'POST',
+    //     body: formData
+    //   });
     
-      if (response.ok) {
-        const data = await response.json();
-        return data.secure_url;
-      }
-      return null;
-    };
+    //   if (response.ok) {
+    //     const data = await response.json();
+    //     return data.secure_url;
+    //   }
+    //   return null;
+    // };
     
-    const [frontURL, backURL, topURL, bottomURL] = await Promise.all([
-      frontimage ? uploadImage(frontimage) : null,
-      backimage ? uploadImage(backimage) : null,
-      topimage ? uploadImage(topimage) : null,
-      bottomimage ? uploadImage(bottomimage) : null
-    ]);
+    // const [frontURL, backURL, topURL, bottomURL] = await Promise.all([
+    //   frontimage ? uploadImage(frontimage) : null,
+    //   backimage ? uploadImage(backimage) : null,
+    //   topimage ? uploadImage(topimage) : null,
+    //   bottomimage ? uploadImage(bottomimage) : null
+    // ]);
     
+
+
   
     const resp = await fetch(`${Host_url}/client/ordersubmit`, {
       method: 'POST',
@@ -192,16 +193,13 @@ function Mainpage() {
 
 
     const phoneNumber = "923335456419";
-    const message = `🪑 *New Custom Order Received!*
+    const message = `🪑 *3D Customizer Order !*
 
 👤 Name: ${form.name}
 📞 Whatsapp: ${form.whatsapp}
    product price: ${form.price}
-🖼️ Images:
-- Front: ${frontURL || "Not provided"}
-- Back: ${backURL || "Not provided"}
-- Top: ${topURL || "Not provided"}
-- Bottom: ${bottomURL || "Not provided"}
+
+- I want to order my 3D Product Customizer.
 
 📩 Sent via flex3d`;
 
@@ -388,7 +386,7 @@ function Mainpage() {
 
           <label htmlFor="">Whatsapp Number:</label>
           <input type="text" inputMode='numeric' maxLength={11} pattern='\d*' placeholder='Your Whatsapp' name='whatsapp' required onChange={(e) => (handleonchange(e))} />
-          <label htmlFor="">Front Image:</label>
+          {/* <label htmlFor="">Front Image:</label>
 
 
           <div style={{ background: 'transparent', width: '60%', height: '5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -412,7 +410,7 @@ function Mainpage() {
           <div style={{ background: 'transparent', width: '60%', height: '5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <input type="file" ref={bottomimageref} onChange={(e) => (handlebottomimage(e))} style={{ width: '60%' }} />
             <img src={bottompreview} alt="" width={70} style={{ borderRadius: '8px 8px' }} />
-          </div>
+          </div> */}
 
           <label htmlFor="">Product Price:</label>
           <input type="number" placeholder='Product price' name='price' required onChange={(e) => (handleonchange(e))} />
