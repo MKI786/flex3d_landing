@@ -150,30 +150,30 @@ function Mainpage() {
     //   formData.append('file', compressedFile);
     //   formData.append("upload_preset", "flex3d");
     //   formData.append("cloud_name", "doofeeyue");
-    
+
     //   const response = await fetch('https://api.cloudinary.com/v1_1/doofeeyue/image/upload', {
     //     method: 'POST',
     //     body: formData
     //   });
-    
+
     //   if (response.ok) {
     //     const data = await response.json();
     //     return data.secure_url;
     //   }
     //   return null;
     // };
-    
+
     // const [frontURL, backURL, topURL, bottomURL] = await Promise.all([
     //   frontimage ? uploadImage(frontimage) : null,
     //   backimage ? uploadImage(backimage) : null,
     //   topimage ? uploadImage(topimage) : null,
     //   bottomimage ? uploadImage(bottomimage) : null
     // ]);
-    
 
 
-  
-    const resp = await fetch(`${Host_url}/client/ordersubmit`, {
+
+
+    const resp = await fetch(`${Host_url}client/ordersubmit`, {
       method: 'POST',
       body: JSON.stringify(form),
       headers: { "Content-Type": "application/json" }
@@ -434,7 +434,7 @@ function Mainpage() {
 
 
 
-      { showPopup && (
+      {showPopup && (
         <div className={Mainpagecss.overlay}>
           {uploadsCompleted ? (
             <div className={Mainpagecss.popup}>
@@ -463,14 +463,14 @@ function Mainpage() {
 
 
       <div className={Mainpagecss.whatsapp} >
-      <a
-    href="https://api.whatsapp.com/send?phone=923335456419&text=Hello%20I%20want%20to%20place%20an%20order"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{textDecoration:'none', color:'inherit', display:'flex', alignItems:'center', justifyContent:'center'}}
-  >
-    <FaSquareWhatsapp />
-  </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=923335456419&text=Hello%20I%20want%20to%20place%20an%20order"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
+          <FaSquareWhatsapp />
+        </a>
       </div>
 
     </>
