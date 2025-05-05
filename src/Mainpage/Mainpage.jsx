@@ -173,7 +173,7 @@ function Mainpage() {
 
 
 
-    const resp = await fetch(`${Host_url}client/ordersubmit`, {
+    const resp = await fetch(`${Host_url}/client/ordersubmit`, {
       method: 'POST',
       body: JSON.stringify(form),
       headers: { "Content-Type": "application/json" }
