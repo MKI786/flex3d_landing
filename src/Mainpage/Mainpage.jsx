@@ -133,7 +133,7 @@ function Mainpage() {
     setshowPopup(true);
 
 
-    
+
     // const compressImage = async (imageFile) => {
     //   const options = {
     //     maxSizeMB: 0.5,
@@ -198,9 +198,8 @@ function Mainpage() {
 
 👤 Name: ${form.name}
 📞 Whatsapp: ${form.whatsapp}
-   product price: ${form.price}
 
-- I want to order my 3D Product Customizer.
+- *Hello! I want a professional website ?*
 
 📩 Sent via flex3d`;
 
@@ -362,6 +361,93 @@ function Mainpage() {
 
       </div>
 
+      <div className={Mainpagecss.osh}>
+        Other Services
+      </div>
+
+      <div className={Mainpagecss.otherservices}>
+
+        <div className={Mainpagecss.card1container}>
+          <div className={Mainpagecss.card1parrent}>
+            <div className={Mainpagecss.cardfront} id={Mainpagecss.bwp}>
+              <div className={Mainpagecss.over}>
+                Business Website / Portfolio
+              </div>
+            </div>
+            <div className={Mainpagecss.cardback}>
+              <ul>
+                <li> <TbHexagonNumber1Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} /> Get Professional and Fast website</li>
+                <li><TbHexagonNumber2Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Build Trust & Business Authority</li>
+                <li><TbHexagonNumber3Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Turn Visitors into Customers — 24/7</li>
+                <li><TbHexagonNumber4Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Appear on Google and Reach New Customers</li>
+                <li><TbHexagonNumber5Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Direct Orders via WhatsApp & Instant Call Option</li>
+              </ul>
+
+              <div className={Mainpagecss.osbuttond}>
+                <button type='button' onClick={() => (setformpopup(true))} className={Mainpagecss.osbutton} >Contact Now !</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div className={Mainpagecss.card1container}>
+          <div className={Mainpagecss.card1parrent}>
+            <div className={Mainpagecss.cardfront} id={Mainpagecss.ewp}>
+              <div className={Mainpagecss.over}>
+                Ecommerce Website
+              </div>
+            </div>
+            <div className={Mainpagecss.cardback}>
+              <ul>
+                <li> <TbHexagonNumber1Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Sell Beyond Your City, Grow Across Pakistan</li>
+                <li><TbHexagonNumber2Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Direct Orders on WhatsApp or Cart Checkout</li>
+                <li><TbHexagonNumber3Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Turn Visitors into Customers — 24/7</li>
+                <li><TbHexagonNumber4Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Reach New Customers and drive sales</li>
+                <li><TbHexagonNumber5Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Run Discounts & Flash Sales Anytime</li>
+              </ul>
+
+              <div className={Mainpagecss.osbuttond}>
+                <button type='button' onClick={() => (setformpopup(true))} className={Mainpagecss.osbutton} >Contact Now !</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div className={Mainpagecss.card1container}>
+          <div className={Mainpagecss.card1parrent}>
+            <div className={Mainpagecss.cardfront} id={Mainpagecss.cmp}>
+              <div className={Mainpagecss.over}>
+                Management System
+              </div>
+            </div>
+            <div className={Mainpagecss.cardback}>
+              <ul>
+                <li> <TbHexagonNumber1Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Track Business Performance in Real-Time</li>
+                <li><TbHexagonNumber2Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Secure All Your Business Data Digitally</li>
+                <li><TbHexagonNumber3Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Access Anywhere, Anytime</li>
+                <li><TbHexagonNumber4Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Save Time, Work Smarter</li>
+                <li><TbHexagonNumber5Filled style={{ color: 'rgb(255, 255, 255)', fontSize: '40px' }} />Maximize your sales performance</li>
+              </ul>
+
+              <div className={Mainpagecss.osbuttond}>
+                <button type='button' onClick={() => (setformpopup(true))} className={Mainpagecss.osbutton} >Contact Now !</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
 
       <div className={Mainpagecss.footer}>
 
@@ -413,8 +499,8 @@ function Mainpage() {
             <img src={bottompreview} alt="" width={70} style={{ borderRadius: '8px 8px' }} />
           </div> */}
 
-          <label htmlFor="">Product Price:</label>
-          <input type="number" placeholder='Product price' name='price' required onChange={(e) => (handleonchange(e))} />
+          {/* <label htmlFor="">Product Price:</label>
+          <input type="number" placeholder='Product price' name='price' required onChange={(e) => (handleonchange(e))} /> */}
 
           <br />
 

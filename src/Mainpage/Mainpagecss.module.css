@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-   
+
     user-select: none;
 }
 
@@ -41,7 +41,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(31, 31, 31);
     user-select: none;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .r1 .r1c1 .heading2 {
@@ -65,7 +65,7 @@
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     border: none;
-    
+
 }
 
 .ctabutton button:hover {
@@ -113,27 +113,28 @@
 
 }
 
-.rot{
+.rot {
     position: absolute;
     width: 200%;
-    height:200%;
-    background: linear-gradient(to bottom, rgb(18, 82, 90), white,white);
+    height: 200%;
+    background: linear-gradient(to bottom, rgb(18, 82, 90), white, white);
     z-index: 2;
     animation-name: rotate;
-    animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
-    animation-direction:normal;    
+    animation-direction: normal;
 }
 
 @keyframes rotate {
 
-from{
-    transform: rotateZ(0deg);
-}
-to{
-    transform: rotateZ(360deg);
-}
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
 }
 
 #i1 {
@@ -322,6 +323,164 @@ to{
     font-size: 18px;
 
 }
+
+.osh {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(24, 109, 121);
+}
+
+
+.otherservices {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+
+.card1container{
+    width: 33%;
+    height: 30rem;
+    overflow: hidden;
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1parrent {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+#bwp{
+    background-image: url(bwp.webp);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#ewp{
+    background-image: url(ewp.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#cmp{
+    background-image: url(cmp.avif);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+.over{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 0px 0px 10px white;
+    line-height: 5rem;
+}
+
+
+.card1container .card1parrent .cardfront {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.card1container .card1parrent .cardback {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    background-color:rgb(24, 110, 121);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    color: white;
+    padding-top: 3rem;
+}
+
+
+.card1container:hover .card1parrent{
+    transform: rotateY(180deg);
+    transition: 1s;
+    }
+
+
+    .cardback ul{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .cardback ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+   .osbutton{
+        background-color: transparent;
+        border: 1px solid rgb(253, 255, 255);
+        color: rgb(255, 255, 255);
+        border-radius: 8px 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        font-size: 35px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+    .osbutton:hover{
+       background-color: white;
+       color:rgb(24, 110, 121) ;
+       transition: 0.2s ease;
+    }
+
 
 
 .footer {
@@ -546,9 +705,8 @@ to{
 }
 
 @keyframes wait {
-    from {
+    from {}
 
-    }
     to {
         text-shadow: 0px 0px 7px rgb(255, 255, 255);
     }
@@ -657,6 +815,33 @@ to{
         align-items: center;
         justify-content: space-between;
     }
+
+
+
+    .otherservices {
+        width: 100%;
+        height: fit-content;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        overflow: hidden;
+        padding: 2rem;
+    }
+
+    .card1container{
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+        perspective: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 
 }
 
@@ -832,7 +1017,7 @@ to{
         color: green;
         font-size: 44px;
         cursor: pointer;
-            background-color: white;
+        background-color: white;
     }
 
 }
