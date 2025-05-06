@@ -365,21 +365,21 @@
 }
 
 #bwp{
-    background-image: url(bwp.webp);
+    background-image: url("/bwp.webp");
     background-position: center;
     background-repeat:no-repeat;
     background-size:cover;
 }
 
 #ewp{
-    background-image: url(ewp.png);
+    background-image: url("/ewp.png");
     background-position: center;
     background-repeat:no-repeat;
     background-size:cover;
 }
 
 #cmp{
-    background-image: url(cmp.avif);
+    background-image: url("/cmp.avif");
     background-position: center;
     background-repeat:no-repeat;
     background-size:cover;
