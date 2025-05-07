@@ -294,80 +294,7 @@ function Mainpage() {
 
       </div>
 
-      <div className={Mainpagecss.r2}>
-
-        <div className={Mainpagecss.box}>
-
-          <div className={Mainpagecss.boxr1}>
-            <FaEye style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
-          </div>
-
-          <div className={Mainpagecss.boxr2}>
-            Live Preview
-          </div>
-
-          <div className={Mainpagecss.boxr3}>
-            See changes to your product in realtime as you customize
-          </div>
-
-        </div>
-
-
-        <div className={Mainpagecss.box}>
-
-          <div className={Mainpagecss.boxr1}>
-            <IoLogoWhatsapp style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
-          </div>
-
-          <div className={Mainpagecss.boxr2}>
-            Order via WhatsApp
-          </div>
-
-          <div className={Mainpagecss.boxr3}>
-            Send your custom design directly to us through whatsapp
-          </div>
-
-        </div>
-
-
-
-        <div className={Mainpagecss.box}>
-
-          <div className={Mainpagecss.boxr1}>
-            <FaSignal style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
-          </div>
-
-          <div className={Mainpagecss.boxr2}>
-            Vendor Friendly
-          </div>
-
-          <div className={Mainpagecss.boxr3}>
-            Easy-to-use tools designed to meet business needs.
-          </div>
-
-        </div>
-
-
-
-        <div className={Mainpagecss.box}>
-
-          <div className={Mainpagecss.boxr1}>
-            <BsFillLightningChargeFill style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
-          </div>
-
-          <div className={Mainpagecss.boxr2}>
-            Fast and Easy
-          </div>
-
-          <div className={Mainpagecss.boxr3}>
-            Simple interface for quick customization without hassle.
-          </div>
-
-        </div>
-
-
-      </div>
-
+      <br />
       <div className={Mainpagecss.osh}>
         Other Services
       </div>
@@ -454,6 +381,84 @@ function Mainpage() {
 
 
       </div>
+
+      <div className={Mainpagecss.r2}>
+
+        <div className={Mainpagecss.box}>
+
+          <div className={Mainpagecss.boxr1}>
+            <FaEye style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
+          </div>
+
+          <div className={Mainpagecss.boxr2}>
+            Live Preview
+          </div>
+
+          <div className={Mainpagecss.boxr3}>
+            See changes to your product in realtime as you customize
+          </div>
+
+        </div>
+
+
+        <div className={Mainpagecss.box}>
+
+          <div className={Mainpagecss.boxr1}>
+            <IoLogoWhatsapp style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
+          </div>
+
+          <div className={Mainpagecss.boxr2}>
+            Order via WhatsApp
+          </div>
+
+          <div className={Mainpagecss.boxr3}>
+            Send your custom design directly to us through whatsapp
+          </div>
+
+        </div>
+
+
+
+        <div className={Mainpagecss.box}>
+
+          <div className={Mainpagecss.boxr1}>
+            <FaSignal style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
+          </div>
+
+          <div className={Mainpagecss.boxr2}>
+            Vendor Friendly
+          </div>
+
+          <div className={Mainpagecss.boxr3}>
+            Easy-to-use tools designed to meet business needs.
+          </div>
+
+        </div>
+
+
+
+        <div className={Mainpagecss.box}>
+
+          <div className={Mainpagecss.boxr1}>
+            <BsFillLightningChargeFill style={{ fontSize: "80px", color: 'rgb(24, 109, 121)' }} />
+          </div>
+
+          <div className={Mainpagecss.boxr2}>
+            Fast and Easy
+          </div>
+
+          <div className={Mainpagecss.boxr3}>
+            Simple interface for quick customization without hassle.
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
 
 
       <div className={Mainpagecss.footer}>
