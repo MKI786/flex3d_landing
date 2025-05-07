@@ -11,6 +11,9 @@ import { TbHexagonNumber5Filled } from "react-icons/tb";
 import { IoMdCloseCircle } from "react-icons/io";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import imageCompression from 'browser-image-compression';
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 
 import Mainpagecss from '../Mainpage/Mainpagecss.module.css'
@@ -225,7 +228,11 @@ function Mainpage() {
 
           <div >
             <div className={Mainpagecss.heading1}>
-              Customize 3D Products For Your E-commerce store in Real-Time
+
+              Professional <span style={{ color: 'rgb(255, 122, 0)', textShadow: '0px 0px 12px rgb(255, 255, 255)' }}>Business</span>,
+              <span style={{ color: 'rgb(255, 122, 0)', textShadow: '0px 0px 12px rgb(255, 255, 255)' }}> E-commerce </span> &
+              <span style={{ color: 'rgb(255, 122, 0)', textShadow: '0px 0px 12px rgb(255, 255, 255)' }} > 3D Product Customizer</span> Websites — Made for Your Brand.
+
             </div>
             <br />
             <div className={Mainpagecss.heading2}>
@@ -452,11 +459,41 @@ function Mainpage() {
       <div className={Mainpagecss.footer}>
 
         <div className={Mainpagecss.left}>
+          <div style={{ backgroundColor: "transparent", cursor: 'pointer', fontWeight: 'lighter', fontFamily: 'sans-serif' }}>flex3d</div>
           <div style={{ backgroundColor: "transparent", cursor: 'pointer', fontWeight: 'lighter', fontFamily: 'sans-serif' }}>Email: muhammadkhalidijaz786@gmail.com</div>
+          <div style={{ backgroundColor: "transparent", cursor: 'pointer', fontWeight: 'lighter', fontFamily: 'sans-serif' }}>Mobile: +92-3335456419</div>
+          <div style={{ backgroundColor: "transparent", cursor: 'pointer', fontWeight: 'lighter', fontFamily: 'sans-serif' }}>Address: C/O Multi Trade Solution Shop no 12 Bangash Plaza VIP Proper Market Aairport Housing Society Gulzare Quaid Rawalpindi</div>
+
+
+          <div className={Mainpagecss.links}>
+
+            Follow For more
+            <a href="www.linkedin.com/in/muhammad-khalid-ijaz-11a339310" target='blank'><FaLinkedin style={{ fontSize: '40px', color: 'rgb(16, 80, 163)' }} id={Mainpagecss.icon} /></a>
+            <a href="https://www.youtube.com/@Khalid-Ijaz" target='blank'><FaYoutube style={{ fontSize: '40px', color: 'rgb(206, 0, 0)' }} id={Mainpagecss.icon} /></a>
+            <a href="https://www.facebook.com/" target='blank'><FaFacebookSquare style={{ fontSize: '40px', color: 'rgb(16, 80, 163)' }} id={Mainpagecss.icon} /></a>
+
+
+          </div>
+
         </div>
 
         <div className={Mainpagecss.right}>
-          &copy; 2025 flex3d
+
+          <div className={Mainpagecss.map}>
+            <iframe
+              className="gmap_iframe"
+              title="Google Map"
+              width="100%"
+              height='100%'
+              frameBorder="0"
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+              src="https://maps.google.com/maps?width=786&amp;height=400&amp;hl=en&amp;q=flex3d rawalpindi&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              style={{ height: "400px!important" }}
+            ></iframe>
+          </div>
+          &copy; All Copyrights Reserved 2025 flex3d
         </div>
 
       </div>
