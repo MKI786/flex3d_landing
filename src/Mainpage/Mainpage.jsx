@@ -214,13 +214,34 @@ function Mainpage() {
     e.target.reset();
   }
 
+  const [top, settop] = useState(false);
 
+
+  useEffect(() => {
+    const handlescroll =()=>{
+      if (window.scrollY === 0) {
+        settop(true);
+  
+      } else {
+        settop(false);
+      }
+    }
+
+    window.addEventListener('scroll', handlescroll)
+
+  }, [])
 
 
 
   return (
     <>
 
+
+      <div className={top ? Mainpagecss.navbar : Mainpagecss.navbar2 }>
+        <div className={Mainpagecss.logo }>
+          <img src="/flex3d_logo.png" alt="" />
+        </div>
+      </div>
 
       <div className={Mainpagecss.r1}>
 
