@@ -214,30 +214,37 @@ function Mainpage() {
     e.target.reset();
   }
 
-  const [top, settop] = useState(false);
+  const [top, settop] = useState("navbar");
+
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
+
+
 
 
   useEffect(() => {
     const handlescroll =()=>{
       if (window.scrollY === 0) {
-        settop(true);
-  
+          settop("navbar");
       } else {
-        settop(false);
+        settop("navbar2");
       }
     }
 
     window.addEventListener('scroll', handlescroll)
 
+    return () => {
+      window.removeEventListener('scroll', handlescroll);
+    };
   }, [])
 
 
 
   return (
     <>
-
-
-      <div className={top ? Mainpagecss.navbar : Mainpagecss.navbar2 }>
+      <div className={Mainpagecss[top]} >
         <div className={Mainpagecss.logo }>
           <img src="/flex3d_logo.png" alt="" />
         </div>
