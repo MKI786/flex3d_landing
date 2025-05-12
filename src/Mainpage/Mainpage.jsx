@@ -288,7 +288,7 @@ function Mainpage() {
 
         <div id={Mainpagecss.vidc}>
 
-          <p id={Mainpagecss.gt}>Free Trial 1 Month</p>
+          <p id={Mainpagecss.gt}>Free Trial 1 Week</p>
 
           <video src="/flex3d_vid_optimized.mp4" id={Mainpagecss.vid} loop autoPlay muted preload='auto' playsInline></video>
         </div>
