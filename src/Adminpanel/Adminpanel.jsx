@@ -10,7 +10,9 @@ function Adminpanel() {
 
   const Host_url = import.meta.env.VITE_HOST_URL;
 
-  console.log("Hosted url is ", Host_url)
+  console.log("Hosted url in admin is ", Host_url);
+
+
 
   const [dropindex, setdropindex] = useState(null);
   const [formpopupindex, setformpopupindex] = useState(null);
