@@ -1,0 +1,363 @@
+.main {
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 1rem;
+    background-color:transparent;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+}
+
+
+
+#heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(24, 109, 121);
+    background: transparent;
+}
+
+.client {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: rgb(199, 199, 199);
+    border-radius: 10px;
+}
+
+.cld {
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(24, 109, 121);
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+    gap: 1rem;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.drop{
+    background: transparent;
+    font-size: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    cursor: pointer;
+    padding: 0.4rem;
+    margin-left: auto;
+}
+
+
+
+.drop:hover{
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.cud{
+    width: 90%;
+    background-color:rgb(233, 233, 233);
+    border-radius: 5px 5px;
+    border-top: none;
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),   /* bottom */
+    4px 0 6px rgba(0, 0, 0, 0.1),   /* right */
+   -4px 0 6px rgba(0, 0, 0, 0.1);   /* left */
+    height:fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    gap: 1rem;
+    padding: 1rem;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.url{
+    background-color: transparent;
+    font-size: 22px;
+    user-select:text;
+}
+
+.status{
+    background-color: transparent;
+    font-size: 22px;
+}
+
+#select{
+    background-color: white;
+    border-radius: 5px 5px;
+    font-size: 18px;
+    outline: none;
+    padding: 0.4rem;
+}
+
+
+
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.1s ease;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.action:hover {
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+}
+
+.name {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: transparent;
+}
+
+.whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: transparent;
+}
+
+
+.formoverley{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top: 5rem;
+    z-index: 10;
+}
+
+
+.formoverley form {
+    box-sizing: border-box;
+    width: 50%;
+    height:fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    position: relative;
+    overflow-y: auto;
+    background-color: rgb(15, 68, 75);
+    color: white;
+    scroll-behavior: smooth;
+    z-index: 10;
+
+}
+
+.formoverley form::-webkit-scrollbar {
+    background-color: rgb(15, 68, 75);
+    width: 0.2rem;
+}
+
+.formoverley form::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 30px 30px;
+}
+
+.formoverley form label {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+
+}
+
+.formoverley form input {
+
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    font-size: 16px;
+    padding: 1rem;
+    border-radius: 10px 10px;
+}
+
+.formoverley form button{
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10px 10px;
+    border: 2px solid transparent;
+}
+
+
+.formoverley form button:hover {
+    transition: 0.1s ease;
+    background-color: rgb(15, 68, 75);
+    color: white;
+    border: 2px solid white;
+}
+
+.cross {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 10px 10px;
+    overflow: hidden;
+}
+
+
+.message{
+
+    background-color: green;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3rem;
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 10px green;
+
+}
+
+.delmessage{
+    background-color: rgb(167, 22, 22);
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3rem;
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 10px red;
+}
+
+#deleteclient{
+    background-color: rgb(121, 24, 24);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 0.5rem;
+    width: 50%;
+    cursor: pointer;
+}
+
+#deleteclient:hover{
+    background-color: rgb(148, 29, 29);
+
+}
+
+.statusmessage{
+    background-color: green;
+    color: white;
+    font-size: 25px;
+    padding: 0.5rem;
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 10px green;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+@media (max-width:500px) {
+
+    .formoverley form {
+        box-sizing: border-box;
+        width: 90%;
+        height:fit-content;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+        position: relative;
+        overflow-y: auto;
+        border-radius: 3px 3px;
+        background-color: rgb(15, 68, 75);
+        color: white;
+    }
+
+    .formoverley form label {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: transparent;
+    }
+
+    .formoverley form input {
+        border: none;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        font-size: 15px;
+        padding: 0.6rem;
+        border-radius: 10px 10px;
+    }
+
+
+    .name {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        background: transparent;
+    }
+    
+    .whatsapp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        background: transparent;
+    }
+
+    #deleteclient{
+        width: 90%;   
+    }
+
+
+}

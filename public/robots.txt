@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flex3d.shop/sitemap.xml
