@@ -420,6 +420,8 @@ function Adminpanel() {
                       (modelindex === i && c.Model && c.Model.length > 0) &&
                       c.Model.map((mod, ind) => {
 
+                        console.log("c.Model", c.Model);
+
                         console.log("thumbnail is ", mod.modelThumbnailurl)
                         return (
                           <div className={Adminpanelcss.mud} key={ind}>
