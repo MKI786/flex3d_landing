@@ -10,9 +10,6 @@ function Adminpanel() {
 
   const Host_url = import.meta.env.VITE_HOST_URL;
 
-  console.log("Hosted url in admin is ", Host_url);
-
-
 
   const [dropindex, setdropindex] = useState(null);
   const [modelindex, setmodelindex] = useState(null);
@@ -419,10 +416,6 @@ function Adminpanel() {
                     {
                       (modelindex === i && c.Model && c.Model.length > 0) &&
                       c.Model.map((mod, ind) => {
-
-                        console.log("c.Model", c.Model);
-
-                        console.log("thumbnail is ", mod.modelThumbnailurl)
                         return (
                           <div className={Adminpanelcss.mud} key={ind}>
                             <div className={Adminpanelcss.url}>
@@ -431,7 +424,6 @@ function Adminpanel() {
                             <button onClick={() => deletemodel(mod._id)} style={{ backgroundColor: 'rgb(148, 13, 13)', padding: '0.5rem', fontSize: '15px', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '10px 10px', boxShadow: '0px 0px 2px black' }}>Delete</button>
                           </div>
                         )
-
                       })
                     }
 
