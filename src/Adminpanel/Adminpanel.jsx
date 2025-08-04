@@ -418,14 +418,19 @@ function Adminpanel() {
 
                     {
                       (modelindex === i && c.Model && c.Model.length > 0) &&
-                      c.Model.map((mod, ind) => (
-                        <div className={Adminpanelcss.mud} key={ind}>
-                          <div className={Adminpanelcss.url}>
-                            <img src={mod.modelThumbnailurl} width={100} alt="" loading='lazy' />
+                      c.Model.map((mod, ind) => {
+
+                        console.log("thumbnail is ", mod.modelThumbnailurl)
+                        return (
+                          <div className={Adminpanelcss.mud} key={ind}>
+                            <div className={Adminpanelcss.url}>
+                              <img src={mod.modelThumbnailurl} width={100} alt="" loading='lazy' />
+                            </div>
+                            <button onClick={() => deletemodel(mod._id)} style={{ backgroundColor: 'rgb(148, 13, 13)', padding: '0.5rem', fontSize: '15px', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '10px 10px', boxShadow: '0px 0px 2px black' }}>Delete</button>
                           </div>
-                          <button onClick={() => deletemodel(mod._id)} style={{ backgroundColor: 'rgb(148, 13, 13)', padding: '0.5rem', fontSize: '15px', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '10px 10px', boxShadow: '0px 0px 2px black' }}>Delete</button>
-                        </div>
-                      ))
+                        )
+
+                      })
                     }
 
 
