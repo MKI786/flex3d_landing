@@ -224,7 +224,7 @@ function Adminpanel() {
       const modelData = new FormData();
       modelData.append("file", modelformdata.modelUrl);
 
-      const res = await fetch('/uploadmega', {
+      const res = await fetch(`${Host_url}/uploadmega`, {
         method: 'POST',
         body: modelData
       });
