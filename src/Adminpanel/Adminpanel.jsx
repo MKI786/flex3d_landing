@@ -223,14 +223,15 @@ function Adminpanel() {
     try {
       const modelData = new FormData();
       modelData.append("file", modelformdata.modelUrl);
-      modelData.append("upload_preset", "flex3d");
-      modelData.append("cloud_name", "doofeeyue");
 
-      const modelRes = await fetch("https://api.cloudinary.com/v1_1/doofeeyue/auto/upload", {
-        method: "POST",
-        body: modelData,
+      const res = await fetch('/uploadmega', {
+        method: 'POST',
+        body: modelData
       });
-      const modelUpload = await modelRes.json();
+
+      const { link } = await res.json();
+      console.log("uploaded glb file link ", link);
+
 
       // 2. Upload thumbnail
       const thumbData = new FormData();
@@ -284,7 +285,7 @@ function Adminpanel() {
       // 4. Send final data to backend (MongoDB)
       const finalBody = {
         modelName: modelformdata.modelName,
-        modelUrl: modelUpload.secure_url,
+        modelUrl: link,
         modelThumbnailurl: thumbUpload.secure_url,
         modelTextureurl: textureUrls,
       };
