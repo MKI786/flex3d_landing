@@ -224,13 +224,14 @@ function Adminpanel() {
       const modelData = new FormData();
       modelData.append("file", modelformdata.modelUrl);
 
-      const res = await fetch(`${Host_url}/uploadmega`, {
+      const res = await fetch(`${Host_url}/uploadglbfile`, {
         method: 'POST',
         body: modelData
       });
 
       const { link } = await res.json();
       console.log("uploaded glb file link ", link);
+
 
 
       // 2. Upload thumbnail
