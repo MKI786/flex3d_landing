@@ -222,7 +222,7 @@ function Adminpanel() {
 
     try {
       const modelData = new FormData();
-      modelData.append("file", modelformdata.modelUr);
+      modelData.append("file", modelformdata.modelUrl);
 
       const res = await fetch(`${Host_url}/uploadglbfile`, {
         method: 'POST',
